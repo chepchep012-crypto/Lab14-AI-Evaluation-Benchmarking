@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd \"C:\\\\Users\\\\Admin\\\\Lab14-AI-Evaluation-Benchmarking\"; $env:PYTHONIOENCODING=\"utf-8\"; python data/synthetic_gen.py)",
+      "PowerShell(cd \"C:\\\\Users\\\\Admin\\\\Lab14-AI-Evaluation-Benchmarking\"; $env:PYTHONIOENCODING=\"utf-8\"; python main.py 2>&1)",
+      "PowerShell(cd \"C:\\\\Users\\\\Admin\\\\Lab14-AI-Evaluation-Benchmarking\"; $env:PYTHONIOENCODING=\"utf-8\"; python check_lab.py)"
+    ]
+  }
+}
