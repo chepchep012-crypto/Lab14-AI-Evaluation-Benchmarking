@@ -331,7 +331,20 @@ Tổng số cases thất bại: **{fail_c}/{total}** ({fail_c/total*100:.1f}%)
 
 ---
 
-## 6. Kết luận
+## 6. Phân công công việc nhóm
+
+| Thành viên | MSSV | Phần đảm nhận | Hạng mục |
+|-----------|------|--------------|---------|
+| Nguyễn Đức Toàn | 2A202600733 | Retrieval Evaluation | Tính toán Hit Rate & MRR, đánh giá chất lượng retrieval stage (`engine/retrieval_eval.py`) |
+| Nguyễn Đức Toàn | 2A202600733 | Dataset & SDG | Thiết kế 55 test cases (easy/medium/hard/adversarial/edge), knowledge base 20 docs (`data/synthetic_gen.py`) |
+| Nguyễn Đức Toàn | 2A202600733 | Multi-Judge Consensus | Tích hợp GPT-4o + Claude, Cohen's Kappa, conflict resolution, position bias check (`engine/llm_judge.py`) |
+| Nguyễn Thái Hoàng | 2A202600573 | Regression Testing | So sánh V1 vs V2, thiết kế Auto Release Gate với 5 tiêu chí chất lượng/chi phí/hiệu năng (`main.py`) |
+| Nguyễn Thái Hoàng | 2A202600573 | Performance (Async) | Thiết kế async runner với semaphore, cost tracking, token usage report (`engine/runner.py`) |
+| Nguyễn Thái Hoàng | 2A202600573 | Failure Analysis | Phân tích 5 Whys, failure clustering, kế hoạch cải tiến (`analysis/failure_analysis.md`) |
+
+---
+
+## 7. Kết luận
 
 Pipeline đánh giá cho thấy **V2 cải thiện đáng kể** so với V1:
 - Score tăng **{reg['score']:+.3f} điểm** ({regression['v1_summary']['avg_score']:.2f} → {metrics['avg_score']:.2f})
